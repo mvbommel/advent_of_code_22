@@ -1,7 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-string text = File.ReadAllText(@"G:\marc\advent_of_code\advent_of_code_22\txt\day3.txt");
-
-string[] backpacks = text.Split("\r\n");
+string[] backpacks = File.ReadAllLines(@"G:\marc\advent_of_code\advent_of_code_22\txt\day3.txt");
 
 List<char> items = new List<char>();
 

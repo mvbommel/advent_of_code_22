@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-string text = File.ReadAllText(@"G:\marc\advent_of_code\advent_of_code_22\txt\day4.txt");
+string[] pairs = File.ReadAllLines(@"G:\marc\advent_of_code\advent_of_code_22\txt\day4.txt");
 
-string[] pairs = text.Split("\r\n");
 int total = 0;
 
 foreach (string pair in pairs)

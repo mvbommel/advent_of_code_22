@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-string text = File.ReadAllText(@"G:\marc\advent_of_code\advent_of_code_22\txt\day2.txt");
-string[] lines = text.Split("\r\n");
+string[] lines = File.ReadAllLines(@"G:\marc\advent_of_code\advent_of_code_22\txt\day2.txt");
 List<string> oponent = new List<string>();
 List<string> self = new List<string>();
 foreach (string line in lines)
