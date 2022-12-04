@@ -29,6 +29,14 @@ foreach (string pair in pairs)
     {
         total++;
     }
+    else if (both[0][0] <= both[1][0] && both[0][1] <= both[1][1] && both[0][1] >= both[1][0])
+    {
+        total++;
+    }
+    else if (both[1][0] <= both[0][0] && both[1][1] <= both[0][1] && both[1][1] >= both[0][0])
+    {
+        total++;
+    }
 }
 Console.WriteLine(total);
 
