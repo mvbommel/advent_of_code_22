@@ -36,10 +36,15 @@ foreach ( string move in moveSets)
     {
         stepsNumeric[i] = Int32.Parse(steps[i]);
     }
+    Stack<char> temp = new Stack<char>();
     for (int i = 0; i < stepsNumeric[1]; i++)
     {
-        stacks[stepsNumeric[3] - 1].Push(stacks[stepsNumeric[2] - 1].Pop());
-    } 
+        temp.Push(stacks[stepsNumeric[2] - 1].Pop());
+    }
+    for (int i = 0; i < stepsNumeric[1]; i++)
+    {
+        stacks[stepsNumeric[3]-1].Push(temp.Pop());
+    }
 }
 string ans = "";
 foreach (Stack<char> stack in stacks)
