@@ -3,7 +3,7 @@
 
 string text = File.ReadAllText(@"G:\marc\advent_of_code\advent_of_code_22\txt\day1.txt");
 
-string[] elves = text.Split("\r\n\r\n");;
+string[] elves = text.Split("\r\n\r\n");
 List<int> list = new List<int>();
 
 foreach (string elve in elves)
