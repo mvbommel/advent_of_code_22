@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-string text = File.ReadAllText(@"G:\marc\advent_of_code\advent_of_code_22\txt\day5.txt");
+string text = File.ReadAllText(@"..\..\..\..\..\..\txt\day5.txt");
 
 string[] parts = text.Split("\r\n\r\n");
 

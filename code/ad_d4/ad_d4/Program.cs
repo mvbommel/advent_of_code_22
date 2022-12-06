@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-string[] pairs = File.ReadAllLines(@"G:\marc\advent_of_code\advent_of_code_22\txt\day4.txt");
+string[] pairs = File.ReadAllLines(@"..\..\..\..\..\..\txt\day4.txt");
 
 int total = 0;
 

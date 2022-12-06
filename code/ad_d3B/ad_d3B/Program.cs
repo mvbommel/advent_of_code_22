@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-string[] backpacks = File.ReadAllLines(@"G:\marc\advent_of_code\advent_of_code_22\txt\day3.txt");
+string[] backpacks = File.ReadAllLines(@"..\..\..\..\..\..\txt\day3.txt");
 
 List<char> items = new List<char>();
 

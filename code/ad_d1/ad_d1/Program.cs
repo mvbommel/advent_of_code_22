@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-string text = File.ReadAllText(@"G:\marc\advent_of_code\advent_of_code_22\txt\day1.txt");
+string text = File.ReadAllText(@"..\..\..\..\..\..\txt\day1.txt");
 
 string[] elves = text.Split("\r\n\r\n");
 List<int> list = new List<int>();
