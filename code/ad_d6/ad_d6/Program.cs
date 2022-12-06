@@ -1,12 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
-string text = File.ReadAllText(@"G:\marc\advent_of_code\advent_of_code_22\txt\day6.txt");
+string text = File.ReadAllText(@"..\..\..\..\..\..\txt\day6.txt");
 char[] characters = text.ToCharArray();
 
 List<char> marker = new List<char>();
-int startIndex = 4;
+int startIndex = 14;
 foreach( char c in characters)
 {
-    if(marker.Count < 4)
+    if(marker.Count < 14)
     {
         marker.Add(c);
     }
