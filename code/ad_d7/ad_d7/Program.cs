@@ -46,26 +46,43 @@ for (int i = 1; i < lines.Count; i++)
     }
 }
 
-    List<Folder> folders = new List<Folder>();
-    List<Folder> toCheck = new List<Folder>(root.getSubFolders());
-    Console.WriteLine("root", root.contents.Count());
+List<Folder> folders = new List<Folder>();
+List<Folder> toCheck = new List<Folder>(root.getSubFolders());
 while (toCheck.Count > 0)
+{
+    Folder f = toCheck[0];
+    toCheck.RemoveAt(0);
+    toCheck.AddRange(f.getSubFolders());
+    if(f.getSize() <= 100000)
     {
-        Folder f = toCheck[0];
- 
-        toCheck.RemoveAt(0);
-        toCheck.AddRange(f.getSubFolders());
-        if(f.getSize() <= 100000)
-        {
-            folders.Add(f);
-        }
+        folders.Add(f);
     }
-    long sum = 0;
-    foreach(Folder f in folders)
+}
+long sum = 0;
+foreach(Folder f in folders)
+{
+    sum += f.getSize();
+}
+   // Console.WriteLine(sum);
+
+long totalSpace = 70000000;
+long freeSpace = totalSpace - root.getSize();
+long smallestFree = root.getSize();
+
+toCheck = new List<Folder>(root.getSubFolders());
+while(toCheck.Count > 0)
+{
+    Folder f = toCheck[0];
+    toCheck.RemoveAt(0);
+    toCheck.AddRange(f.getSubFolders());
+    long size = f.getSize();
+    if(freeSpace + size > 30000000 && size < smallestFree)
     {
-        sum += f.getSize();
+        smallestFree= size;
     }
-    Console.WriteLine(sum);
+}
+Console.WriteLine(smallestFree);
+
 
 public abstract class Node
 {
