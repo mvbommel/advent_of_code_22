@@ -35,10 +35,12 @@ while( rounds < 10000)
                     
                     if (m.Items[i] % 19 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[5].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[3].Items.Add(m.Items[i]);
                     }
                     break;
@@ -46,10 +48,12 @@ while( rounds < 10000)
                     m.Items[i] = (m.Items[i] + 5);
                     if (m.Items[i] % 13 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[7].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[6].Items.Add(m.Items[i]);
                     }
                     break;
@@ -57,10 +61,12 @@ while( rounds < 10000)
                     m.Items[i] = (m.Items[i] + 8);
                     if (m.Items[i] % 5 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[3].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[0].Items.Add(m.Items[i]);
                     }
                     break;
@@ -68,10 +74,12 @@ while( rounds < 10000)
                     m.Items[i] = (m.Items[i] + 1);
                     if (m.Items[i] % 7 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[4].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[5].Items.Add(m.Items[i]);
                     }
                     break;
@@ -79,10 +87,12 @@ while( rounds < 10000)
                     m.Items[i] = (m.Items[i] + 4);
                     if (m.Items[i] % 17 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[1].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[6].Items.Add(m.Items[i]);
                     }
                     break;
@@ -90,10 +100,12 @@ while( rounds < 10000)
                     m.Items[i] = (m.Items[i] * 7);
                     if (m.Items[i] % 2 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[1].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[4].Items.Add(m.Items[i]);
                     }
                     break;
@@ -101,10 +113,12 @@ while( rounds < 10000)
                     m.Items[i] = (m.Items[i] + 6);
                     if (m.Items[i] % 3 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[7].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[2].Items.Add(m.Items[i]);
                     }
                     break;
@@ -112,10 +126,12 @@ while( rounds < 10000)
                     m.Items[i] = (m.Items[i] * m.Items[i]);
                     if (m.Items[i] % 11 == 0)
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[0].Items.Add(m.Items[i]);
                     }
                     else
                     {
+                        m.Items[i] %= 9699690;
                         monkeyList[2].Items.Add(m.Items[i]);
                     }
                     break;
