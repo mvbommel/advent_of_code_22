@@ -7,8 +7,8 @@ HashSet<Point> visible = new HashSet<Point>();
 for (int row = 0; row < lines.Count; row++)
 {
     string s2 = lines[row];
-    char highest = '0';
-    char reverseHighest = '0';
+    int highest = 0;
+    int reverseHighest = 0;
     for (int col =0; col < s2.Length; col++)
     {
         
@@ -29,8 +29,8 @@ for (int row = 0; row < lines.Count; row++)
 string s = lines[0];
 for (int col = 0; col < s.Length; col++)
 {
-    char highestDown = '0';
-    char highestUp = '0';
+    int highestDown = 0;
+    int highestUp = 0;
     for (int row = 0; row < lines.Count; row++)
     {
         string s2 = lines[row];
@@ -49,5 +49,6 @@ for (int col = 0; col < s.Length; col++)
     }
 
 }
+
 
 Console.WriteLine(visible.Count);
