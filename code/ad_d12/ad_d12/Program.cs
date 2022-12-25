@@ -8,7 +8,7 @@ List<Tile> GetAdjecentTiles(Tile current, List<Tile> tiles)
     {
         if (tile.x == current.x && (tile.y == current.y - 1 || tile.y == current.y + 1))
         {
-            if (tile.value - current.value <= 1 && !tile.visited)
+            if (current.value - 1 <= tile.value && !tile.visited)
             {
                 tile.count = current.count + 1;
                 adjecent.Add(tile);
@@ -16,7 +16,7 @@ List<Tile> GetAdjecentTiles(Tile current, List<Tile> tiles)
         }
         else if (tile.y == current.y && (tile.x == current.x - 1 || tile.x == current.x + 1))
         {
-            if (tile.value - current.value <= 1 && !tile.visited)
+            if (current.value -1 <= tile.value && !tile.visited)
             {
                 tile.count = current.count + 1;
                 adjecent.Add(tile);
@@ -28,8 +28,6 @@ List<Tile> GetAdjecentTiles(Tile current, List<Tile> tiles)
 
 
 List<string> lines = File.ReadAllLines(@"..\..\..\..\..\..\txt\day12.txt").ToList();
-
-Console.WriteLine(lines.Count * lines[0].Length);
 List<Tile> tiles = new List<Tile>();
 for (int i = 0; i < lines.Count; i++)
 {
@@ -52,22 +50,20 @@ foreach (Tile tile in tiles)
     if (tile.character == 'S')
     {
         tile.value = 'a' - '0';
-        tile.count = 0;
-        activeTiles.Add(tile);
     }
     else if (tile.character == 'E')
     {
         tile.value = 'z' - '0';
+        tile.count = 0;
+        activeTiles.Add(tile);
     }
 }
-int count = 0;
+Console.WriteLine(activeTiles.Count);
 while (activeTiles.Count > 0)
 {
-    count++;
     Tile current = activeTiles.First();
-    //Console.WriteLine(count);
     current.visited = true;
-    if (current.character == 'E')
+    if (current.character == 'S' || current.character == 'a')
     {
         Console.WriteLine("arrived at finish");
         Console.WriteLine(current.count);
@@ -75,6 +71,7 @@ while (activeTiles.Count > 0)
     }
 
     List<Tile> adjecent = GetAdjecentTiles(current, tiles);
+    Console.WriteLine(adjecent.Count);
     foreach (Tile tile in adjecent)
     {
         if(activeTiles.Any(x => x.x == tile.x && x.y == tile.y))
@@ -86,6 +83,7 @@ while (activeTiles.Count > 0)
     }
     activeTiles.Remove(current);
 }
+Console.WriteLine("no end found");
 
 
 
