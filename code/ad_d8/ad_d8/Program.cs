@@ -50,5 +50,5 @@ for (int col = 0; col < s.Length; col++)
 
 }
 
-
 Console.WriteLine(visible.Count);
+
